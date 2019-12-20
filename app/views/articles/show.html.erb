@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="col-md-12 margin-top-5per article-block">
+    <%= image_tag 'dtm.jpg', class: 'article-image padding-top15' %>
+    <h1> <%= @article.title %> </h1>
+    <div class="padding-bottom-15">
+      <p class="title"><%= @article.title %></p>
+      <p class="text-right">
+        <%= @article.created_at.strftime("%Y年%m月%d日") %>
+      </p>
+    </div>
+  </div>
+</div>
