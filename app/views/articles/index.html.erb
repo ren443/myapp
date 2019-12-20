@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="text-center"> レンのブログ </h1>
+  <% @articles.each do |article| %>
+    <div class="col-md-3 margin-top-5per bg-white">
+      <%= image_tag 'dtm.jpg', class: 'img-responsive' %>
+      <p class="title"><%= article.title %></p>
+      <%= article.created_at.strftime("%Y年%m月%d日") %>
+    </div>
+  <% end %>
+</div>
