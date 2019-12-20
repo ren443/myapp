@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
     @articles = Article.order(created_at: :desc)
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
   private
 
   def find_article
-    @article = article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def article_params

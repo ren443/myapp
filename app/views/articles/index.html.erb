@@ -1,10 +1,16 @@
 <div class="container">
   <h1 class="text-center"> レンのブログ </h1>
   <% @articles.each do |article| %>
-    <div class="col-md-3 margin-top-5per bg-white">
+    <%= link_to article do %>
+      <div class="col-md-3 margin-top-5per article-block padding-top15">
       <%= image_tag 'dtm.jpg', class: 'img-responsive' %>
-      <p class="title"><%= article.title %></p>
-      <%= article.created_at.strftime("%Y年%m月%d日") %>
-    </div>
+      <div class="padding-bottom-15">
+        <p class="title"><%= article.title %></p>
+        <span>
+          <%= article.created_at.strftime("%Y年%m月%d日") %>
+        </span>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
