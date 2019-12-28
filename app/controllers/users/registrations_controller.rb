@@ -11,8 +11,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    
     super
+    # Userが無事に作られていたらProfileを作成
+    if resource
+      profile = Profile.new
+      profile.user_id = resource.id
+      profile.name = params[:profile][:name]
+      profile.save
+    end
   end
 
   # GET /resource/edit
