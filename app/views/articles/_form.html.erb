@@ -1,8 +1,9 @@
 <%= form_for article do |f| %>
-  <div class="form-group padding-top15">
+  <div class='form-group padding-top15 relative'>
+    <%= image_tag 'gray.jpg', class: 'article-image'%>
+    <i class="fa fa-camera"></i>
     <%= f.attachment_field :image %>
   </div>
-
   <div class="form-group padding-top15">
     <%= f.label :title, "タイトル"%>
     <%= f.text_field :title, class: "form-control"%>

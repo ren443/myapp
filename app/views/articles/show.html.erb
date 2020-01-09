@@ -3,6 +3,8 @@
 
     <% if @article.image_id.present? %>
       <%= image_tag attachment_url(@article, :image), class: "article-image padding-top-15" %>
+    <% else %>
+      <%= image_tag 'nill.jpg', class: "article-image padding-top-15"%>
     <% end %>
     <h1> <%= @article.title %> </h1>
     <div class="padding-bottom-15" style="padding: 10px">

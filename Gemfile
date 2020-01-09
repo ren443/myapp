@@ -42,6 +42,8 @@ gem 'devise'
 gem "refile", github: 'refile/refile', require: "refile/rails"
 gem "refile-mini_magick", github: 'refile/refile-mini_magick'
 
+ gem 'font-awesome-rails'
+
 group :development, :test do
   gem 'rspec-rails', '3.1.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
